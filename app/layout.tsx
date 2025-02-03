@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from '@/app/lib/font'
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "rafidoth",
@@ -18,6 +19,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
